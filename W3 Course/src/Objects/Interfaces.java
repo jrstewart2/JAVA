@@ -32,4 +32,28 @@ class Interfaces {
 Used to achieve Abstraction
 Interfaces are completely abstract classes used to group related methods with empty bodies
 To access, interface must be implemented by another word. Body is provided by the implement class
+
+INTERFACES cannot contain constructors as they cannot be used to create objects
+
+WHY TO USE:
+- to achieve security: hide certain details
+- class can only inherit from one superclass. Multiple inheritance achieved with interfaces.
  */
+
+// MULTIPLE INTERFACES EXAMPLE
+interface FirstInterface {
+    public void myMethod(); // interface method
+}
+
+interface SecondInterface {
+    public void myOtherMethod(); // interface method
+}
+
+class DemoClass implements FirstInterface, SecondInterface {
+    public void myMethod() {
+        System.out.println("Some text..");
+    }
+    public void myOtherMethod() {
+        System.out.println("Some other text...");
+    }
+}
